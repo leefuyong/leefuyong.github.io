@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        python对象——字符串 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> sometimes code ,  sometimes thinking </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>lee fuyong</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-访问字符串中的值"><span class="toc-text">Python 访问字符串中的值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-字符串更新"><span class="toc-text">Python 字符串更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python转义字符"><span class="toc-text">Python转义字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python字符串运算"><span class="toc-text">Python字符串运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python格式化字符串"><span class="toc-text">Python格式化字符串</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> sometimes code ,  sometimes thinking </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        python对象——字符串
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-01-20 00:57:06</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#Python" title="Python">Python</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <blockquote>
+<p>Python3:字符串是 Python 中最常用的数据类型。我们可以使用引号( ‘ 或 “ )来创建字符串。创建字符串很简单，只要为变量分配一个值即可。例如：<br>&#160; &#160; &#160; &#160;var1 = ‘Hello World!’<br>&#160; &#160; &#160; &#160;var2 = “Runoob”  </p>
+</blockquote>
+<h3 id="Python-访问字符串中的值"><a href="#Python-访问字符串中的值" class="headerlink" title="Python 访问字符串中的值"></a>Python 访问字符串中的值</h3><p>&#160; &#160; &#160; &#160;Python 不支持单字符类型，单字符在 Python 中也是作为一个字符串使用。Python 访问子字符串，可以使用方括号来截取字符串，如下实例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var1 = <span class="string">'Hello World!'</span></span><br><span class="line">var2 = <span class="string">"Runoob"</span></span><br><span class="line"> </span><br><span class="line">print (<span class="string">"var1[0]: "</span>, var1[<span class="number">0</span>]) <span class="comment">//索引从0开始 var1[0]: H </span></span><br><span class="line">print (<span class="string">"var2[1:5]: "</span>, var2[<span class="number">1</span>:<span class="number">5</span>])<span class="comment">//截取字符串操作默认左开右闭区间 var2[1:5]: unoo</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Python-字符串更新"><a href="#Python-字符串更新" class="headerlink" title="Python 字符串更新"></a>Python 字符串更新</h3><p>&#160; &#160; &#160; &#160;你可以截取字符串的一部分并与其他字段拼接，如下实例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var1 = <span class="string">'Hello World!'</span></span><br><span class="line">print (<span class="string">"已更新字符串 : "</span>, var1[:<span class="number">6</span>] + <span class="string">'Runoob!'</span>) <span class="comment">// [0-5] Hello Runnoob!</span></span><br></pre></td></tr></table></figure>
+<h3 id="Python转义字符"><a href="#Python转义字符" class="headerlink" title="Python转义字符"></a>Python转义字符</h3><p>&#160; &#160; &#160; &#160;在需要在字符中使用特殊字符时，python用反斜杠(\)转义字符。如下表：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\(在行尾时)</td>
+<td>续行符</td>
+</tr>
+<tr>
+<td>\</td>
+<td>反斜杠符号</td>
+</tr>
+<tr>
+<td>\’</td>
+<td>单引号</td>
+</tr>
+<tr>
+<td>\”</td>
+<td>双引号</td>
+</tr>
+<tr>
+<td>\a</td>
+<td>响铃</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>退格backspace</td>
+</tr>
+<tr>
+<td>\e</td>
+<td>转义</td>
+</tr>
+<tr>
+<td>\000</td>
+<td>空</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>纵向制表符</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>横向制表符</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页</td>
+</tr>
+<tr>
+<td>\oyy</td>
+<td>八进制数，yy代表的字符，例如：\o12代表换行</td>
+</tr>
+<tr>
+<td>\xyy</td>
+<td>十六进制数，yy代表的字符，例如：\x0a代表换行</td>
+</tr>
+<tr>
+<td>\other</td>
+<td>其它的字符以普通格式输出</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Python字符串运算"><a href="#Python字符串运算" class="headerlink" title="Python字符串运算"></a>Python字符串运算</h3><p>&#160; &#160; &#160; &#160;下表实例变量a值为字符串 “Hello”，b变量值为 “Python”：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">"Hello"</span></span><br><span class="line">b = <span class="string">"Python"</span></span><br><span class="line"></span><br><span class="line">print("a + b 输出结果：", a + b) # + 字符串连接操作 a + b 输出结果： HelloPython</span><br><span class="line">print("a * 2 输出结果：", a * 2) # 重复输出字符串 a*2 输出结果：HelloHello</span><br><span class="line">print("a[1] 输出结果：", a[1]) # 通过索引获取字符串中字符 a[1] 输出结果 e</span><br><span class="line">print("a[1:4] 输出结果：", a[1:4]) # 截取字符串中的一部分，遵循左闭右开原则，str[0,2] 是不包含第 3 个字符的。 a[1:4] 输出结果： ell</span><br><span class="line"></span><br><span class="line">if( "H" in a) : # in 成员运算符 - 如果字符串中包含给定的字符返回 True</span><br><span class="line">    print(<span class="string">"H 在变量 a 中"</span>)</span><br><span class="line"><span class="keyword">else</span> :</span><br><span class="line">    print(<span class="string">"H 不在变量 a 中"</span>)</span><br><span class="line"></span><br><span class="line">if( "M" not in a) : # not in 成员运算符 - 如果字符串中不包含给定的字符返回 True</span><br><span class="line">    print(<span class="string">"M 不在变量 a 中"</span>)</span><br><span class="line"><span class="keyword">else</span> :</span><br><span class="line">    print(<span class="string">"M 在变量 a 中"</span>)</span><br><span class="line"></span><br><span class="line">print (r'\n') # 	原始字符串 - 原始字符串：所有的字符串都是直接按照字面的意思来使用，没有转义特殊或不能打印的字符。 原始字符串除在字符串的第一个引号前加上字母 r（可以大小写）以外，与普通字符串有着几乎完全相同的语法。</span><br><span class="line">print (R<span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Python格式化字符串"><a href="#Python格式化字符串" class="headerlink" title="Python格式化字符串"></a>Python格式化字符串</h3><p>&#160; &#160; &#160; &#160;Python 支持格式化字符串的输出 。尽管这样可能会用到非常复杂的表达式，但最基本的用法是将一个值插入到一个有字符串格式符 %s 的字符串中。在 Python 中，字符串格式化使用与 C 中 sprintf 函数一样的语法。</p>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

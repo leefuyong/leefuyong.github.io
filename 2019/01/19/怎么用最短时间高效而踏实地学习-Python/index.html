@@ -35,7 +35,7 @@
 </div>
 
 <div class="index-about">
-    <i> sometimes code,sometimes thinking </i>
+    <i> sometimes code ,  sometimes thinking </i>
 </div>
 
 <div class="index-container">
@@ -89,7 +89,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一章-集体智慧导言"><span class="toc-text">第一章 集体智慧导言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-什么是集体智慧"><span class="toc-text">1.1 什么是集体智慧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-什么是机器学习"><span class="toc-text">1.2 什么是机器学习</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二章-提供推荐"><span class="toc-text">第二章 提供推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-协作型过滤"><span class="toc-text">2.1 协作型过滤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-搜集偏好"><span class="toc-text">2.2 搜集偏好</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-寻找相近的用户"><span class="toc-text">2.3 寻找相近的用户</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-欧几里得距离"><span class="toc-text">2.3.1 欧几里得距离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-皮尔逊相关度评价"><span class="toc-text">2.3.2 皮尔逊相关度评价</span></a></li></ol></li></ol></li></ol>
 </div>
     
 </div>
@@ -108,7 +108,7 @@
     </div>
 </div>
         <div class="index-about-mobile">
-            <i> sometimes code,sometimes thinking </i>
+            <i> sometimes code ,  sometimes thinking </i>
         </div>
     </div>
     
@@ -137,7 +137,19 @@
 
     </div>
     <div class="post-content ">
-        
+        <blockquote>
+<p>因为Python是一门不需要花太多精力（甚至可以说很少），就可以基本掌握的一门语言，所以推荐这本书。这是一本非常好的针对机器学习的入门书，书中的例子源码都是Python实现的，并且能帮你迅速熟悉Python相关的各种计算库。</p>
+</blockquote>
+<h1 id="第一章-集体智慧导言"><a href="#第一章-集体智慧导言" class="headerlink" title="第一章 集体智慧导言"></a>第一章 集体智慧导言</h1><h2 id="1-1-什么是集体智慧"><a href="#1-1-什么是集体智慧" class="headerlink" title="1.1 什么是集体智慧"></a>1.1 什么是集体智慧</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;集体智慧（Collective Intelligence）:为了创造新的想法，而将一群人的行为、偏好或思想组合在一起。</p>
+<h2 id="1-2-什么是机器学习"><a href="#1-2-什么是机器学习" class="headerlink" title="1.2 什么是机器学习"></a>1.2 什么是机器学习</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机器学习是人工智能（AI，artificial intelligence）领域中与算法相关的一个子域，它允许计算机不断地进行学习。大多数情况下，这相当于将一组数据传递给算法，并由算法推断出与这些数据的属性相关的信息————借助这些信息，算法就能准确预测出未来有可能会出现的其他数据。为了实现归纳，机器学习会利用它所认定的出现于数据中的重要特征对数据进行“训练”，并借此得到一个模型。</p>
+<h1 id="第二章-提供推荐"><a href="#第二章-提供推荐" class="headerlink" title="第二章 提供推荐"></a>第二章 提供推荐</h1><h2 id="2-1-协作型过滤"><a href="#2-1-协作型过滤" class="headerlink" title="2.1 协作型过滤"></a>2.1 协作型过滤</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一个协作型过滤算法通常的做法是对一大群人进行搜索，并从中找出与我们品味相近的一-小群人。算法会对这些人所偏爱的其他内容进行考查，并将它们组合起来构造出一个经过排名的推荐列表。有许多不同的方法可以帮助我们确定哪些人与自己的品味相近，并将他们的选择组合成列表。</p>
+<h2 id="2-2-搜集偏好"><a href="#2-2-搜集偏好" class="headerlink" title="2.2 搜集偏好"></a>2.2 搜集偏好</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们可以先构造一个简单的数据集：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"> critics=&#123;&apos;Lisa Rose&apos;: &#123;&apos;Lady in the Water&apos;: 2.5, &apos;Snakes on a Plane&apos;: 3.5,</span><br><span class="line"> &apos;Just My Luck&apos;: 3.0, &apos;Superman Returns&apos;: 3.5, &apos;You, Me and Dupree&apos;: 2.5, </span><br><span class="line"> &apos;The Night Listener&apos;: 3.0&#125;,</span><br><span class="line"></span><br><span class="line"> &apos;Gene Seymour&apos;: &#123;&apos;Lady in the Water&apos;: 3.0, &apos;Snakes on a Plane&apos;: 3.5, </span><br><span class="line"> &apos;Just My Luck&apos;: 1.5, &apos;Superman Returns&apos;: 5.0, &apos;The Night Listener&apos;: 3.0, </span><br><span class="line"> &apos;You, Me and Dupree&apos;: 3.5&#125;, </span><br><span class="line"></span><br><span class="line">&apos;Michael Phillips&apos;: &#123;&apos;Lady in the Water&apos;: 2.5, &apos;Snakes on a Plane&apos;: 3.0,</span><br><span class="line"> &apos;Superman Returns&apos;: 3.5, &apos;The Night Listener&apos;: 4.0&#125;,</span><br><span class="line"></span><br><span class="line">&apos;Claudia Puig&apos;: &#123;&apos;Snakes on a Plane&apos;: 3.5, &apos;Just My Luck&apos;: 3.0,</span><br><span class="line"> &apos;The Night Listener&apos;: 4.5, &apos;Superman Returns&apos;: 4.0, </span><br><span class="line"> &apos;You, Me and Dupree&apos;: 2.5&#125;,</span><br><span class="line"></span><br><span class="line">&apos;Mick LaSalle&apos;: &#123;&apos;Lady in the Water&apos;: 3.0, &apos;Snakes on a Plane&apos;: 4.0, </span><br><span class="line"> &apos;Just My Luck&apos;: 2.0, &apos;Superman Returns&apos;: 3.0, &apos;The Night Listener&apos;: 3.0,</span><br><span class="line"> &apos;You, Me and Dupree&apos;: 2.0&#125;, </span><br><span class="line"></span><br><span class="line">&apos;Jack Matthews&apos;: &#123;&apos;Lady in the Water&apos;: 3.0, &apos;Snakes on a Plane&apos;: 4.0,</span><br><span class="line"> &apos;The Night Listener&apos;: 3.0, &apos;Superman Returns&apos;: 5.0, &apos;You, Me and Dupree&apos;: 3.5&#125;,</span><br><span class="line"></span><br><span class="line">&apos;Toby&apos;: &#123;&apos;Snakes on a Plane&apos;:4.5,&apos;You, Me and Dupree&apos;:1.0,&apos;Superman Returns&apos;:4.0&#125;,</span><br><span class="line"></span><br><span class="line">&apos;xiaoYu&apos;: &#123;&apos;Lady in the Water&apos;: 2.0, &apos;Snakes on a Plane&apos;: 3.0,</span><br><span class="line"> &apos;Just My Luck&apos;: 2.5, &apos;Superman Returns&apos;: 3.0, &apos;You, Me and Dupree&apos;: 2.0, </span><br><span class="line"> &apos;The Night Listener&apos;: 2.5&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果你对文字型数据不是那么敏感，我们将其转化为表格：总而言之：这里是几位观影者对几部电影的评分。</p>
+<p><div align="center"><br>    <img src="http://47.105.201.20/48dce9e5-e15b-4ce6-9125-648dfd90a8e9.jpg" width="700" height="100"><br></div></p>
+<h2 id="2-3-寻找相近的用户"><a href="#2-3-寻找相近的用户" class="headerlink" title="2.3 寻找相近的用户"></a>2.3 寻找相近的用户</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;搜集完人们的偏好数据之后，我们须要有一种方法来确定人们在品味方面的相似程度。为此，我们可以将每个人与所有其他人进行对比，并计算他们的相似度评价值。有若千种方法可以达到此目的，介绍两套计算相似度评价值的体系:<strong>欧几里德距离</strong>和<strong>皮尔逊相关度</strong></p>
+<h3 id="2-3-1-欧几里得距离"><a href="#2-3-1-欧几里得距离" class="headerlink" title="2.3.1 欧几里得距离"></a>2.3.1 欧几里得距离</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;多维空间中两点之间的距离，用来衡量二者的相似度。距离越小，相似度越高。</p>
+<h3 id="2-3-2-皮尔逊相关度评价"><a href="#2-3-2-皮尔逊相关度评价" class="headerlink" title="2.3.2 皮尔逊相关度评价"></a>2.3.2 皮尔逊相关度评价</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;判断两组数据与某一直线拟合程度的一种度量。在数据不是很规范的时候（如影评者对影片的评价总是相对于平均水平偏离很大时），会给出更好的结果。相关系数越大，相似度越高。</p>
+
         
         <br>
         <div id="comment-container">
