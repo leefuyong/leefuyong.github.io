@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Python3 列表 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> sometimes code ,  sometimes thinking </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>lee fuyong</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#列表的相关操作"><span class="toc-text">列表的相关操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#列表的创建"><span class="toc-text">列表的创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#访问列表中的值"><span class="toc-text">访问列表中的值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新列表"><span class="toc-text">更新列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除列表元素"><span class="toc-text">删除列表元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python列表脚本操作符"><span class="toc-text">Python列表脚本操作符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python列表截取与拼接"><span class="toc-text">Python列表截取与拼接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python嵌套列表"><span class="toc-text">Python嵌套列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python列表函数-amp-方法"><span class="toc-text">Python列表函数&amp;方法</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> sometimes code ,  sometimes thinking </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Python3 列表
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2019-01-20 02:55:47</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#Python" title="Python">Python</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <blockquote>
+<p>序列是Python中最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推。Python有6个序列的内置类型，但最常见的是列表和元组。序列都可以进行的操作包括索引，切片，加，乘，检查成员。此外，Python已经内置确定序列的长度以及确定最大和最小的元素的方法。列表是最常用的Python数据类型，它可以作为一个方括号内的逗号分隔值出现。列表的数据项不需要具有相同的类型.</p>
+</blockquote>
+<h2 id="列表的相关操作"><a href="#列表的相关操作" class="headerlink" title="列表的相关操作"></a>列表的相关操作</h2><blockquote>
+<p>关于列表操作的具体步骤和代码实现，可以参考文末的代码片段，里面会有相关注释。</p>
+</blockquote>
+<h3 id="列表的创建"><a href="#列表的创建" class="headerlink" title="列表的创建"></a>列表的创建</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list1 = [&apos;Google&apos;, &apos;Runoob&apos;, 1997, 2000];</span><br><span class="line">list2 = [1, 2, 3, 4, 5 ];</span><br><span class="line">list3 = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;];</span><br></pre></td></tr></table></figure>
+<h3 id="访问列表中的值"><a href="#访问列表中的值" class="headerlink" title="访问列表中的值"></a>访问列表中的值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list1 = [&apos;Google&apos;, &apos;Runoob&apos;, 1997, 2000];</span><br><span class="line">list2 = [1, 2, 3, 4, 5, 6, 7 ];</span><br><span class="line">print (&quot;list1[0]: &quot;, list1[0])</span><br><span class="line">print (&quot;list2[1:5]: &quot;, list2[1:5])</span><br></pre></td></tr></table></figure>
+<h3 id="更新列表"><a href="#更新列表" class="headerlink" title="更新列表"></a>更新列表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list = [&apos;Google&apos;, &apos;Runoob&apos;, 1997, 2000]</span><br><span class="line">print (&quot;第三个元素为 : &quot;, list[2])</span><br><span class="line">list[2] = 2001</span><br><span class="line">print (&quot;更新后的第三个元素为 : &quot;, list[2])</span><br></pre></td></tr></table></figure>
+<h3 id="删除列表元素"><a href="#删除列表元素" class="headerlink" title="删除列表元素"></a>删除列表元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list = [&apos;Google&apos;, &apos;Runoob&apos;, 1997, 2000]</span><br><span class="line">print (&quot;原始列表 : &quot;, list)</span><br><span class="line">del list[2]</span><br><span class="line">print (&quot;删除第三个元素 : &quot;, list)</span><br></pre></td></tr></table></figure>
+<h3 id="Python列表脚本操作符"><a href="#Python列表脚本操作符" class="headerlink" title="Python列表脚本操作符"></a>Python列表脚本操作符</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">len([1, 2, 3])	3	长度</span><br><span class="line">[1, 2, 3] + [4, 5, 6]	[1, 2, 3, 4, 5, 6]	组合</span><br><span class="line">[&apos;Hi!&apos;] * 4	[&apos;Hi!&apos;, &apos;Hi!&apos;, &apos;Hi!&apos;, &apos;Hi!&apos;]	重复</span><br><span class="line">3 in [1, 2, 3]	True	元素是否存在于列表中</span><br><span class="line">for x in [1, 2, 3]: print(x, end=&quot; &quot;)	1 2 3	迭代</span><br></pre></td></tr></table></figure>
+<h3 id="Python列表截取与拼接"><a href="#Python列表截取与拼接" class="headerlink" title="Python列表截取与拼接"></a>Python列表截取与拼接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">L[2]	&apos;Taobao&apos;	读取第三个元素</span><br><span class="line">L[-2]	&apos;Runoob&apos;	从右侧开始读取倒数第二个元素: count from the right</span><br><span class="line">L[1:]	[&apos;Runoob&apos;, &apos;Taobao&apos;]	输出从第二个元素开始后的所有元素</span><br></pre></td></tr></table></figure>
+<h3 id="Python嵌套列表"><a href="#Python嵌套列表" class="headerlink" title="Python嵌套列表"></a>Python嵌套列表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;a = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span><br><span class="line">&gt;&gt;&gt; n = [1, 2, 3]</span><br><span class="line">&gt;&gt;&gt; x = [a, n]</span><br><span class="line">&gt;&gt;&gt; x</span><br><span class="line">[[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;], [1, 2, 3]]</span><br><span class="line">&gt;&gt;&gt; x[0]</span><br><span class="line">[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span><br><span class="line">&gt;&gt;&gt; x[0][1]</span><br><span class="line">&apos;b&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="Python列表函数-amp-方法"><a href="#Python列表函数-amp-方法" class="headerlink" title="Python列表函数&amp;方法"></a>Python列表函数&amp;方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1	len(list)</span><br><span class="line">列表元素个数</span><br><span class="line">2	max(list)</span><br><span class="line">返回列表元素最大值</span><br><span class="line">3	min(list)</span><br><span class="line">返回列表元素最小值</span><br><span class="line">4	list(seq)</span><br><span class="line">将元组转换为列表</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">1	list.append(obj)</span><br><span class="line">在列表末尾添加新的对象</span><br><span class="line">2	list.count(obj)</span><br><span class="line">统计某个元素在列表中出现的次数</span><br><span class="line">3	list.extend(seq)</span><br><span class="line">在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）</span><br><span class="line">4	list.index(obj)</span><br><span class="line">从列表中找出某个值第一个匹配项的索引位置</span><br><span class="line">5	list.insert(index, obj)</span><br><span class="line">将对象插入列表</span><br><span class="line">6	list.pop([index=-1])</span><br><span class="line">移除列表中的一个元素（默认最后一个元素），并且返回该元素的值</span><br><span class="line">7	list.remove(obj)</span><br><span class="line">移除列表中某个值的第一个匹配项</span><br><span class="line">8	list.reverse()</span><br><span class="line">反向列表中元素</span><br><span class="line">9	list.sort(cmp=None, key=None, reverse=False)</span><br><span class="line">对原列表进行排序</span><br><span class="line">10	list.clear()</span><br><span class="line">清空列表</span><br><span class="line">11	list.copy()</span><br><span class="line">复制列表</span><br></pre></td></tr></table></figure>
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
