@@ -56,32 +56,32 @@
             <li>
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
-                    <span>HOME</span>
+                    <span>主页</span>
                 </a>
             </li>
             <li>
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
-                    <span>TAGS</span>
+                    <span>标签</span>
                 </a>
             </li>
             <li>
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
-                    <span>ARCHIVES</span>
+                    <span>存档</span>
                 </a>
             </li>
             <li>
                 <a href="/about/">
                     <i class="iconfont icon-guanyu2"></i>
-                    <span>ABOUT</span>
+                    <span>关于</span>
                 </a>
             </li>
             
             <li>
                 <a id="search">
                     <i class="iconfont icon-sousuo1"></i>
-                    <span>SEARCH</span>
+                    <span>搜索</span>
                 </a>
             </li>
             
@@ -89,7 +89,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#集合实例"><span class="toc-text">集合实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#集合的基本操作"><span class="toc-text">集合的基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#添加元素"><span class="toc-text">添加元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#移除元素"><span class="toc-text">移除元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#计算集合元素个数"><span class="toc-text">计算集合元素个数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#请空集合"><span class="toc-text">请空集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#判断元素是否存在于某个集合中"><span class="toc-text">判断元素是否存在于某个集合中</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#集合内置方法完整列表"><span class="toc-text">集合内置方法完整列表</span></a></li></ol>
 </div>
     
 </div>
@@ -100,7 +100,7 @@
         <div class="search-input">
             <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
             <input id="search-input">
-            <span id="begin-search">search</span>
+            <span id="begin-search">搜索</span>
         </div>
         <div class="search-result-container" id="search-result-container">
 
@@ -123,21 +123,52 @@
     </div>
 
     <div class="post-meta">
-        <span class="attr">Post：<span>2019-01-20 08:27:33</span></span>
+        <span class="attr">发布于：<span>2019-01-20 08:27:33</span></span>
         
-        <span class="attr">Tags：/
+        <span class="attr">标签：/
         
         <a class="tag" href="/tags/#集合" title="集合">集合</a>
         <span>/</span>
         
         
         </span>
-        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
 </span>
 
     </div>
     <div class="post-content ">
-        
+        <blockquote>
+<p>集合（set）是一个无序的不重复元素序列。</p>
+</blockquote>
+<p>可以使用大括号 { } 或者 set() 函数创建集合，注意：创建一个空集合必须用 set() 而不是 { }，因为 { } 是用来创建一个空字典。</p>
+<p>创建格式：parame = {value01,value02,…} 或者 set(value)</p>
+<h3 id="集合实例"><a href="#集合实例" class="headerlink" title="集合实例"></a>集合实例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;basket = &#123;<span class="string">'apple'</span>, <span class="string">'orange'</span>, <span class="string">'apple'</span>, <span class="string">'pear'</span>, <span class="string">'orange'</span>, <span class="string">'banana'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; print(basket)                      # 这里演示的是去重功能</span><br><span class="line">&#123;<span class="string">'orange'</span>, <span class="string">'banana'</span>, <span class="string">'pear'</span>, <span class="string">'apple'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; 'orange' in basket                 # 快速判断元素是否在集合内</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; <span class="string">'crabgrass'</span> in basket</span><br><span class="line">False</span><br><span class="line"> </span><br><span class="line">&gt;&gt;&gt; # 下面展示两个集合间的运算.</span><br><span class="line">...</span><br><span class="line">&gt;&gt;&gt; a = set(<span class="string">'abracadabra'</span>)</span><br><span class="line">&gt;&gt;&gt; b = set(<span class="string">'alacazam'</span>)</span><br><span class="line">&gt;&gt;&gt; a                                  </span><br><span class="line">&#123;<span class="string">'a'</span>, <span class="string">'r'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; a - b                              # 集合a中包含而集合b中不包含的元素</span><br><span class="line">&#123;<span class="string">'r'</span>, <span class="string">'d'</span>, <span class="string">'b'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; a | b                              # 集合a或b中包含的所有元素</span><br><span class="line">&#123;<span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'r'</span>, <span class="string">'d'</span>, <span class="string">'b'</span>, <span class="string">'m'</span>, <span class="string">'z'</span>, <span class="string">'l'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; a &amp; b                              # 集合a和b中都包含了的元素</span><br><span class="line">&#123;<span class="string">'a'</span>, <span class="string">'c'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; a ^ b                              # 不同时包含于a和b的元素</span><br><span class="line">&#123;<span class="string">'r'</span>, <span class="string">'d'</span>, <span class="string">'b'</span>, <span class="string">'m'</span>, <span class="string">'z'</span>, <span class="string">'l'</span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="集合的基本操作"><a href="#集合的基本操作" class="headerlink" title="集合的基本操作"></a>集合的基本操作</h3><h4 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h4><p>s.add( x )</p>
+<p>将元素 x 添加到集合 s 中，如果元素已存在，则不进行任何操作。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;thisset = set((<span class="string">"Google"</span>, <span class="string">"Runoob"</span>, <span class="string">"Taobao"</span>))</span><br><span class="line">&gt;&gt;&gt; thisset.add(<span class="string">"Facebook"</span>)</span><br><span class="line">&gt;&gt;&gt; print(thisset)</span><br><span class="line">&#123;<span class="string">'Taobao'</span>, <span class="string">'Facebook'</span>, <span class="string">'Google'</span>, <span class="string">'Runoob'</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>还有一个方法，也可以添加元素，且参数可以是列表，元组，字典等，语法格式如下：</p>
+<p>s.update( x )</p>
+<p>x 可以有多个，用逗号分开。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;thisset = set((<span class="string">"Google"</span>, <span class="string">"Runoob"</span>, <span class="string">"Taobao"</span>))</span><br><span class="line">&gt;&gt;&gt; thisset.update(&#123;<span class="number">1</span>,<span class="number">3</span>&#125;)</span><br><span class="line">&gt;&gt;&gt; print(thisset)</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">3</span>, <span class="string">'Google'</span>, <span class="string">'Taobao'</span>, <span class="string">'Runoob'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; thisset.update([<span class="number">1</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>])  </span><br><span class="line">&gt;&gt;&gt; print(thisset)</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="string">'Google'</span>, <span class="string">'Taobao'</span>, <span class="string">'Runoob'</span>&#125;</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="移除元素"><a href="#移除元素" class="headerlink" title="移除元素"></a>移除元素</h4><p>语法格式如下：</p>
+<p>s.remove( x )</p>
+<p>将元素 x 从集合 s 中移除，如果元素不存在，则会发生错误。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;thisset = set((<span class="string">"Google"</span>, <span class="string">"Runoob"</span>, <span class="string">"Taobao"</span>))</span><br><span class="line">&gt;&gt;&gt; thisset.remove(<span class="string">"Taobao"</span>)</span><br><span class="line">&gt;&gt;&gt; print(thisset)</span><br><span class="line">&#123;<span class="string">'Google'</span>, <span class="string">'Runoob'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; thisset.remove("Facebook")   # 不存在会发生错误</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, in &lt;<span class="keyword">module</span>&gt;</span><br><span class="line">KeyError: <span class="string">'Facebook'</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+<p>此外还有一个方法也是移除集合中的元素，且如果元素不存在，不会发生错误。格式如下所示：</p>
+<p>s.discard( x )<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;thisset = set((<span class="string">"Google"</span>, <span class="string">"Runoob"</span>, <span class="string">"Taobao"</span>))</span><br><span class="line">&gt;&gt;&gt; thisset.discard("Facebook")  # 不存在不会发生错误</span><br><span class="line">&gt;&gt;&gt; print(thisset)</span><br><span class="line">&#123;<span class="string">'Taobao'</span>, <span class="string">'Google'</span>, <span class="string">'Runoob'</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>我们也可以设置随机删除集合中的一个元素并返回该删除的元素，随机每次执行都不相同，语法格式如下：</p>
+<p>s.pop() </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">thisset = set((<span class="string">"Google"</span>, <span class="string">"Runoob"</span>, <span class="string">"Taobao"</span>, <span class="string">"Facebook"</span>))</span><br><span class="line">x = thisset.pop()</span><br><span class="line">print(x)</span><br></pre></td></tr></table></figure>
+<p>然而在交互模式，pop 是删除集合的第一个元素（排序后的集合的第一个元素）。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;thisset = set((<span class="string">"Google"</span>, <span class="string">"Runoob"</span>, <span class="string">"Taobao"</span>, <span class="string">"Facebook"</span>))</span><br><span class="line">&gt;&gt;&gt; thisset.pop()</span><br><span class="line"><span class="string">'Facebook'</span></span><br><span class="line">&gt;&gt;&gt; print(thisset)</span><br><span class="line">&#123;<span class="string">'Google'</span>, <span class="string">'Taobao'</span>, <span class="string">'Runoob'</span>&#125;</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="计算集合元素个数"><a href="#计算集合元素个数" class="headerlink" title="计算集合元素个数"></a>计算集合元素个数</h4><p>语法格式如下：</p>
+<p>len(s)</p>
+<p>计算集合 s 元素个数。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;thisset = set((<span class="string">"Google"</span>, <span class="string">"Runoob"</span>, <span class="string">"Taobao"</span>))</span><br><span class="line">&gt;&gt;&gt; len(thisset)</span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="请空集合"><a href="#请空集合" class="headerlink" title="请空集合"></a>请空集合</h4><p>s.clear()方法</p>
+<h4 id="判断元素是否存在于某个集合中"><a href="#判断元素是否存在于某个集合中" class="headerlink" title="判断元素是否存在于某个集合中"></a>判断元素是否存在于某个集合中</h4><p>x in s</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt;&gt;&gt;thisset = set((<span class="string">"Google"</span>, <span class="string">"Runoob"</span>, <span class="string">"Taobao"</span>))</span><br><span class="line">&gt;&gt;&gt; <span class="string">"Runoob"</span> in thisset</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; <span class="string">"Facebook"</span> in thisset</span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="集合内置方法完整列表"><a href="#集合内置方法完整列表" class="headerlink" title="集合内置方法完整列表"></a>集合内置方法完整列表</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">方法	描述</span><br><span class="line">add()	为集合添加元素</span><br><span class="line">clear()	移除集合中的所有元素</span><br><span class="line">copy()	拷贝一个集合</span><br><span class="line">difference()	返回多个集合的差集</span><br><span class="line">difference_update()	移除集合中的元素，该元素在指定的集合也存在。</span><br><span class="line">discard()	删除集合中指定的元素</span><br><span class="line">intersection()	返回集合的交集</span><br><span class="line">intersection_update()	删除集合中的元素，该元素在指定的集合中不存在。</span><br><span class="line">isdisjoint()	判断两个集合是否包含相同的元素，如果没有返回 True，否则返回 False。</span><br><span class="line">issubset()	判断指定集合是否为该方法参数集合的子集。</span><br><span class="line">issuperset()	判断该方法的参数集合是否为指定集合的子集</span><br><span class="line">pop()	随机移除元素</span><br><span class="line">remove()	移除指定元素</span><br><span class="line">symmetric_difference()	返回两个集合中不重复的元素集合。</span><br><span class="line">symmetric_difference_update()	移除当前集合中在另外一个指定集合相同的元素，并将另外一个指定集合中不同的元素插入到当前集合中。</span><br><span class="line">union()	返回两个集合的并集</span><br><span class="line">update()	给集合添加元素</span><br></pre></td></tr></table></figure>
+
         
         <br>
         <div id="comment-container">
