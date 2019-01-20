@@ -56,32 +56,32 @@
             <li>
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
-                    <span>HOME</span>
+                    <span>主页</span>
                 </a>
             </li>
             <li>
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
-                    <span>TAGS</span>
+                    <span>标签</span>
                 </a>
             </li>
             <li>
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
-                    <span>ARCHIVES</span>
+                    <span>存档</span>
                 </a>
             </li>
             <li>
                 <a href="/about/">
                     <i class="iconfont icon-guanyu2"></i>
-                    <span>ABOUT</span>
+                    <span>关于</span>
                 </a>
             </li>
             
             <li>
                 <a id="search">
                     <i class="iconfont icon-sousuo1"></i>
-                    <span>SEARCH</span>
+                    <span>搜索</span>
                 </a>
             </li>
             
@@ -100,7 +100,7 @@
         <div class="search-input">
             <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
             <input id="search-input">
-            <span id="begin-search">search</span>
+            <span id="begin-search">搜索</span>
         </div>
         <div class="search-result-container" id="search-result-container">
 
@@ -123,16 +123,16 @@
     </div>
 
     <div class="post-meta">
-        <span class="attr">Post：<span>2019-01-20 04:52:50</span></span>
+        <span class="attr">发布于：<span>2019-01-20 04:52:50</span></span>
         
-        <span class="attr">Tags：/
+        <span class="attr">标签：/
         
         <a class="tag" href="/tags/#监督学习" title="监督学习">监督学习</a>
         <span>/</span>
         
         
         </span>
-        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
 </span>
 
     </div>
@@ -145,10 +145,15 @@
 <p>输入空间：在监督学习中，将输入的所有可能取值的集合称之为输入空间。</p>
 <p>输入空间：在监督学习中，将输入的所有可能取值的集合称之为输入空间。</p>
 <p>特征空间：每一个输入对应一个实例instance，实例通常由特征向量表示。我们称所有实例对应的特征向量所在的空间为特征空间。</p>
-<p>输入实例的特征变量如下表示：右上角为实例x的第i个特征</p>
-<p><img src="/img/1.jpg" alt="avatar"></p>
-<p>而实例变量x的右下角角标表示为多个输入变量中的第i个实例变量：</p>
-<p>&#160; &#160; &#160;&#160; &#160; &#160;<img src="/img/2.jpg" alt="avatar"></p>
+<p>监督学习从训练数据（trainint data）中学习模型，对测试数据进行预测。训练数据通常由输入和输出对组成，也称之为样本或样本点。</p>
+<p>输入变量、输出变量可以离散也可以连续：</p>
+<blockquote>
+<p> &nbsp;如果输入输出均为连续变量，我们称之为回归问题。<br>&#160; &#160; &#160; &#160;如果输出变量为有限个离散的值，我们称之为分类问题。<br>&#160; &#160; &#160; &#160;如果输入输出均为离散序列，我们称之为标注问题。</p>
+</blockquote>
+<p>联合概率分布</p>
+<p>机器学习基于输入和输出遵循联合概率分布，但是前提未知。</p>
+<p>假设空间</p>
+<p>监督学习的目的在于学习输入到输出的映射，这一映射由模型表示。机器学习的目的在于找到一个最优的模型。模型属于由输入空间到输出空间的映射的集合，这个集合就是假设空间（hypothesis space），假设空间的确定意味着学习范围的确定。</p>
 
         
         <br>
