@@ -56,32 +56,32 @@
             <li>
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
-                    <span>主页</span>
+                    <span>HOME</span>
                 </a>
             </li>
             <li>
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
-                    <span>标签</span>
+                    <span>TAGS</span>
                 </a>
             </li>
             <li>
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
-                    <span>存档</span>
+                    <span>ARCHIVES</span>
                 </a>
             </li>
             <li>
                 <a href="/about/">
                     <i class="iconfont icon-guanyu2"></i>
-                    <span>关于</span>
+                    <span>ABOUT</span>
                 </a>
             </li>
             
             <li>
                 <a id="search">
                     <i class="iconfont icon-sousuo1"></i>
-                    <span>搜索</span>
+                    <span>SEARCH</span>
                 </a>
             </li>
             
@@ -89,7 +89,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建元组"><span class="toc-text">创建元组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#访问元组"><span class="toc-text">访问元组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改元组"><span class="toc-text">修改元组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除元组"><span class="toc-text">删除元组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元组运算符"><span class="toc-text">元组运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元组索引，截取"><span class="toc-text">元组索引，截取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元组内置函数"><span class="toc-text">元组内置函数</span></a></li></ol>
 </div>
     
 </div>
@@ -100,7 +100,7 @@
         <div class="search-input">
             <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
             <input id="search-input">
-            <span id="begin-search">搜索</span>
+            <span id="begin-search">search</span>
         </div>
         <div class="search-result-container" id="search-result-container">
 
@@ -123,21 +123,45 @@
     </div>
 
     <div class="post-meta">
-        <span class="attr">发布于：<span>2019-01-20 08:26:08</span></span>
+        <span class="attr">Post：<span>2019-01-20 08:26:08</span></span>
         
-        <span class="attr">标签：/
+        <span class="attr">Tags：/
         
         <a class="tag" href="/tags/#元组" title="元组">元组</a>
         <span>/</span>
         
         
         </span>
-        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
 </span>
 
     </div>
     <div class="post-content ">
-        
+        <blockquote>
+<p>元组由简单的对象组成，与列表非常相似，但是不支持原处修改（因为它是不可变序列），通常由圆括号组成，而列表由中括号构成，具有列表的大多数属性，简单介绍如下：<br>&#160; &#160; &#160; &#160;1、任意对象的有序集合（有序指的是创建元组对象内容的维持顺序）<br>&#160; &#160; &#160; &#160;2、通过偏移进行存取<br>&#160; &#160; &#160; &#160;3、属于不可变序列类型<br>&#160; &#160; &#160; &#160;4、固定长度、异构、任意嵌套<br>&#160; &#160; &#160; &#160;5、对象引用的数组</p>
+</blockquote>
+<h3 id="创建元组"><a href="#创建元组" class="headerlink" title="创建元组"></a>创建元组</h3><p>元组创建很简单，只需要在括号中添加元素，并使用逗号隔开即可。</p>
+<blockquote>
+<p>&#160;tup1 = (‘Google’, ‘Runoob’, 1997, 2000);<br>&#160; &#160; &#160; &#160;tup2 = (1, 2, 3, 4, 5 );<br>&#160; &#160; &#160; &#160;tup3 = “a”, “b”, “c”, “d”;   #  不需要括号也可以<br>&#160; &#160; &#160; &#160;type(tup3)<br>&#160; &#160; &#160; &#160;<class 'tuple'=""></class></p>
+</blockquote>
+<p>创建空元组</p>
+<blockquote>
+<p>tup1 = ();</p>
+</blockquote>
+<p>元组中只包含一个元素时，需要在元素后面添加逗号，否则括号会被当作运算符使用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tup1 = (<span class="number">50</span>)</span><br><span class="line">type(tup1)     # 不加逗号，类型为整型</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">int</span>'&gt;</span></span><br><span class="line"><span class="class"><span class="title">tup1</span> </span>= (<span class="number">50</span>,)</span><br><span class="line">type(tup1)     # 加上逗号，类型为元组</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">tuple</span>'&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="访问元组"><a href="#访问元组" class="headerlink" title="访问元组"></a>访问元组</h3><p>访问元组依然可以通过下标索引方式进行访问和截取等操作。</p>
+<h3 id="修改元组"><a href="#修改元组" class="headerlink" title="修改元组"></a>修改元组</h3><p>元组中的元素值是不允许修改的，但我们可以对元组进行连接组合，如下实例:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tup1 = (<span class="number">12</span>, <span class="number">34.56</span>);</span><br><span class="line">tup2 = (<span class="string">'abc'</span>, <span class="string">'xyz'</span>)</span><br><span class="line"> </span><br><span class="line"># 以下修改元组元素操作是非法的。</span><br><span class="line"># tup1[0] = 100</span><br><span class="line"> </span><br><span class="line"># 创建一个新的元组</span><br><span class="line">tup3 = tup1 + tup2;</span><br><span class="line">print (tup3)</span><br></pre></td></tr></table></figure>
+<h3 id="删除元组"><a href="#删除元组" class="headerlink" title="删除元组"></a>删除元组</h3><p>元组中的元素值是不允许删除的，但我们可以使用del语句来删除整个元组，如下实例:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tup = (<span class="string">'Google'</span>, <span class="string">'Runoob'</span>, <span class="number">1997</span>, <span class="number">2000</span>)</span><br><span class="line"> </span><br><span class="line">print (tup)</span><br><span class="line">del tup;</span><br><span class="line">print (<span class="string">"删除后的元组 tup : "</span>)</span><br><span class="line">print (tup)</span><br></pre></td></tr></table></figure>
+<h3 id="元组运算符"><a href="#元组运算符" class="headerlink" title="元组运算符"></a>元组运算符</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Python 表达式	结果	描述</span><br><span class="line">len((<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>))	<span class="number">3</span>	计算元素个数</span><br><span class="line">(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>) + (<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>)	(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>)	连接</span><br><span class="line">(<span class="string">'Hi!'</span>,) * <span class="number">4</span>	(<span class="string">'Hi!'</span>, <span class="string">'Hi!'</span>, <span class="string">'Hi!'</span>, <span class="string">'Hi!'</span>)	复制</span><br><span class="line"><span class="number">3</span> in (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)	True	元素是否存在</span><br><span class="line"><span class="function"><span class="keyword">for</span> x <span class="title">in</span> <span class="params">(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span>: <span class="title">print</span> <span class="params">(x,)</span>	1 2 3	迭代</span></span><br></pre></td></tr></table></figure>
+<h3 id="元组索引，截取"><a href="#元组索引，截取" class="headerlink" title="元组索引，截取"></a>元组索引，截取</h3><p>因为元组也是一个序列，所以我们可以访问元组中的指定位置的元素，也可以截取索引中的一段元素，如下所示：</p>
+<p>元组：L = (‘Google’, ‘Taobao’, ‘Runoob’)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Python 表达式	结果	描述</span><br><span class="line">L[<span class="number">2</span>]	<span class="string">'Runoob'</span>	读取第三个元素</span><br><span class="line">L[-<span class="number">2</span>]	<span class="string">'Taobao'</span>	反向读取；读取倒数第二个元素</span><br><span class="line">L[<span class="number">1</span>:]	(<span class="string">'Taobao'</span>, <span class="string">'Runoob'</span>)	截取元素，从第二个开始后的所有元素。</span><br></pre></td></tr></table></figure>
+<h3 id="元组内置函数"><a href="#元组内置函数" class="headerlink" title="元组内置函数"></a>元组内置函数</h3><p>1、len(tuple)计算元组元素个数。<br>2、max(tuple)<br>返回元组中元素最大值。<br>3、    min(tuple)<br>返回元组中元素最小值。<br>4、tuple(seq)<br>将列表转换为元组。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; list1= [<span class="string">'Google'</span>, <span class="string">'Taobao'</span>, <span class="string">'Runoob'</span>, <span class="string">'Baidu'</span>]</span><br><span class="line">&gt;&gt;&gt; tuple1=tuple(list1)</span><br><span class="line">&gt;&gt;&gt; tuple1</span><br><span class="line">(<span class="string">'Google'</span>, <span class="string">'Taobao'</span>, <span class="string">'Runoob'</span>, <span class="string">'Baidu'</span>)</span><br></pre></td></tr></table></figure>
+
         
         <br>
         <div id="comment-container">
