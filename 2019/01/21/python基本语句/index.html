@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        python基本语句 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> sometimes code ,  sometimes thinking </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>lee fuyong</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#python程序结构"><span class="toc-text">python程序结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#赋值、表达式和打印"><span class="toc-text">赋值、表达式和打印</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#赋值语句"><span class="toc-text">赋值语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#if测试和语法规则"><span class="toc-text">if测试和语法规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#while测试和语法规则"><span class="toc-text">while测试和语法规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#for测试和语法规则"><span class="toc-text">for测试和语法规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#break测试和语法规则"><span class="toc-text">break测试和语法规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#continue测试和语法规则"><span class="toc-text">continue测试和语法规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#range、zip、map、enumerate相关函数"><span class="toc-text">range、zip、map、enumerate相关函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#迭代器和解析"><span class="toc-text">迭代器和解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#递归函数"><span class="toc-text">递归函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数注解"><span class="toc-text">函数注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lambda表达式函数"><span class="toc-text">lambda表达式函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#递归函数-1"><span class="toc-text">递归函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#map函数"><span class="toc-text">map函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#filter函数和reduce函数"><span class="toc-text">filter函数和reduce函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#私有属性和私有方法"><span class="toc-text">私有属性和私有方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#继承"><span class="toc-text">继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重写父类方法"><span class="toc-text">重写父类方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#扩展父类方法"><span class="toc-text">扩展父类方法</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> sometimes code ,  sometimes thinking </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        python基本语句
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2019-01-21 01:09:31</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#Python" title="Python">Python</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <blockquote>
+<p>现在我们已经基本熟悉了python的基本对象类型，接下来学习python的基本语句。</p>
+</blockquote>
+<h3 id="python程序结构"><a href="#python程序结构" class="headerlink" title="python程序结构"></a>python程序结构</h3><ol>
+<li>程序由模块构成。</li>
+<li>模块包含语句。</li>
+<li>语句包含表达式。</li>
+<li>表达式建立并操作对象。</li>
+</ol>
+<h3 id="赋值、表达式和打印"><a href="#赋值、表达式和打印" class="headerlink" title="赋值、表达式和打印"></a>赋值、表达式和打印</h3><h4 id="赋值语句"><a href="#赋值语句" class="headerlink" title="赋值语句"></a>赋值语句</h4><p><strong>赋值语句建立对象引用值</strong>：python赋值语句会将对象引用值存储在变量名或数据结构的元素内。赋值语句总是建立对象的引用，而不是复制对象。</p>
+<p><strong>变量名在首次赋值时会被创建</strong>：python会将对象引用值赋值给变量时，为其创建变量名。</p>
+<p><strong>变量名在使用之前必须赋值否则会报错</strong></p>
+<p>关于赋值、表达式和打印，如果你对其它任意一种编程语言相对熟悉的话，这些都是相互通用的，具体差别，用到时言说一二。</p>
+<h4 id="if测试和语法规则"><a href="#if测试和语法规则" class="headerlink" title="if测试和语法规则"></a>if测试和语法规则</h4><p>if语句的一般形式：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(i == <span class="number">1</span>):</span><br><span class="line">    print(<span class="string">"i == 1"</span>)</span><br><span class="line">elif(i==<span class="number">2</span>):</span><br><span class="line">    print(<span class="string">"i == 2"</span>)</span><br><span class="line">elif(i==<span class="number">3</span>):</span><br><span class="line">    print(<span class="string">"i == 3"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"i!=1 且 i!=2 且 i!=3"</span>)</span><br></pre></td></tr></table></figure></p>
+<h4 id="while测试和语法规则"><a href="#while测试和语法规则" class="headerlink" title="while测试和语法规则"></a>while测试和语法规则</h4><h4 id="for测试和语法规则"><a href="#for测试和语法规则" class="headerlink" title="for测试和语法规则"></a>for测试和语法规则</h4><h4 id="break测试和语法规则"><a href="#break测试和语法规则" class="headerlink" title="break测试和语法规则"></a>break测试和语法规则</h4><h4 id="continue测试和语法规则"><a href="#continue测试和语法规则" class="headerlink" title="continue测试和语法规则"></a>continue测试和语法规则</h4><h4 id="range、zip、map、enumerate相关函数"><a href="#range、zip、map、enumerate相关函数" class="headerlink" title="range、zip、map、enumerate相关函数"></a>range、zip、map、enumerate相关函数</h4><h3 id="迭代器和解析"><a href="#迭代器和解析" class="headerlink" title="迭代器和解析"></a>迭代器和解析</h3><h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><h3 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h3><h3 id="函数注解"><a href="#函数注解" class="headerlink" title="函数注解"></a>函数注解</h3><h3 id="lambda表达式函数"><a href="#lambda表达式函数" class="headerlink" title="lambda表达式函数"></a>lambda表达式函数</h3><h3 id="递归函数-1"><a href="#递归函数-1" class="headerlink" title="递归函数"></a>递归函数</h3><h3 id="map函数"><a href="#map函数" class="headerlink" title="map函数"></a>map函数</h3><h3 id="filter函数和reduce函数"><a href="#filter函数和reduce函数" class="headerlink" title="filter函数和reduce函数"></a>filter函数和reduce函数</h3><h3 id="私有属性和私有方法"><a href="#私有属性和私有方法" class="headerlink" title="私有属性和私有方法"></a>私有属性和私有方法</h3><p>私有属性和私有方法定义：属性名称或方法名前面加上两个下划线__即可：比如说：women类的age属性，secret方法均为私有。一旦私有，外界无法访问，但是类内部依然能够使用，但是后续介绍到继承时，应该要知道，子类也是无法访问父类的私有属性和私有方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Women:</span><br><span class="line"></span><br><span class="line">    <span class="function">def <span class="title">__init__</span><span class="params">(self,name)</span>:</span></span><br><span class="line"><span class="function">        self.name </span>= name</span><br><span class="line">        self.__age = <span class="number">18</span></span><br><span class="line"></span><br><span class="line">    <span class="function">def <span class="title">__secret</span><span class="params">(self)</span>:</span></span><br><span class="line"><span class="function">        <span class="title">print</span><span class="params">(<span class="string">"%s的年龄是%d"</span> % (self.name,self.__age)</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">xiaofang </span>= Women(<span class="string">"xiaofang"</span>)</span><br></pre></td></tr></table></figure>
+<p>但是python的私有属性和私有方法是一种伪私有属性和私有方法，熟悉编译器原理依然可以访问:</p>
+<p>xiaofang._Women__age访问私有属性</p>
+<p>xiaofang._Women__secret访问私有方法</p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承是面向对象语言的三大特性（封装、继承、多态）之一，它可以减少代码的重复度，实现代码重用。</p>
+<pre>
+    继承语法：
+    继承名词： 父类、基类、派生类等相关名词。
+    继承的传递性：子类会继承父类以及父类的父类的所有属性和方法。
+</pre>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Animal:</span><br><span class="line">    <span class="function">def <span class="title">eat</span><span class="params">(self)</span>:</span></span><br><span class="line"><span class="function">        <span class="title">print</span><span class="params">(<span class="string">"eat"</span>)</span></span></span><br><span class="line"><span class="function">    def <span class="title">drink</span><span class="params">(self)</span>:</span></span><br><span class="line"><span class="function">        <span class="title">print</span><span class="params">(<span class="string">"drink"</span>)</span></span></span><br><span class="line"><span class="function">    def <span class="title">sleep</span><span class="params">(self)</span>:</span></span><br><span class="line"><span class="function">        <span class="title">print</span><span class="params">(<span class="string">"sleep"</span>)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">class <span class="title">Dog</span><span class="params">(Animal)</span>:</span></span><br><span class="line"><span class="function">    def <span class="title">bark</span><span class="params">(self)</span>:</span></span><br><span class="line"><span class="function">        <span class="title">print</span><span class="params">(<span class="string">"wangwang"</span>)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">dog </span>= Dog()</span><br><span class="line"></span><br><span class="line">dog.eat()</span><br><span class="line">dog.drink()</span><br><span class="line">dog.sleep()</span><br><span class="line">dog.sleep()</span><br></pre></td></tr></table></figure>
+<h3 id="重写父类方法"><a href="#重写父类方法" class="headerlink" title="重写父类方法"></a>重写父类方法</h3><p>根据实际需求，重写实现继承自父类的方法实现。比如说，重写Animal中的eat方法，Dog类中重新实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Animal:</span><br><span class="line">    <span class="function">def <span class="title">eat</span><span class="params">(self)</span>:</span></span><br><span class="line"><span class="function">        <span class="title">print</span><span class="params">(<span class="string">"eat"</span>)</span></span></span><br><span class="line"><span class="function">    def <span class="title">drink</span><span class="params">(self)</span>:</span></span><br><span class="line"><span class="function">        <span class="title">print</span><span class="params">(<span class="string">"drink"</span>)</span></span></span><br><span class="line"><span class="function">    def <span class="title">sleep</span><span class="params">(self)</span>:</span></span><br><span class="line"><span class="function">        <span class="title">print</span><span class="params">(<span class="string">"sleep"</span>)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">class <span class="title">Dog</span><span class="params">(Animal)</span>:</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">    def <span class="title">eat</span><span class="params">(self)</span>:</span></span><br><span class="line"><span class="function">        <span class="title">print</span><span class="params">(<span class="string">"dog eat"</span>)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">    def <span class="title">bark</span><span class="params">(self)</span>:</span></span><br><span class="line"><span class="function">        <span class="title">print</span><span class="params">(<span class="string">"wangwang"</span>)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">dog </span>= Dog()</span><br><span class="line"></span><br><span class="line">dog.eat()</span><br><span class="line">dog.drink()</span><br><span class="line">dog.sleep()</span><br><span class="line">dog.sleep()</span><br></pre></td></tr></table></figure>
+<p>输出结果为：</p>
+<pre>
+    dog eat
+    drink
+    sleep
+    sleep
+</pre>
+
+<h3 id="扩展父类方法"><a href="#扩展父类方法" class="headerlink" title="扩展父类方法"></a>扩展父类方法</h3><p>子类中继承的方法，父类中的实现并不是那么完全，这个时候我们可以在父类实现的基础上进行扩展。用到父类的实现代码时，只需要调用super.methodName()即可。同样也可以通过父类雷鸣.方法名（self）self必须传入。</p>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
