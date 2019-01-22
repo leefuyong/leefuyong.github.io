@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        python数值计算模块——NumPy - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 生若直木,不语斧凿 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>李付勇</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#数组属性"><span class="toc-text">数组属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的维数"><span class="toc-text">数组的维数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的形状"><span class="toc-text">数组的形状</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的元素个数"><span class="toc-text">数组的元素个数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的元素数据类型"><span class="toc-text">数组的元素数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据每个元素的大小"><span class="toc-text">数据每个元素的大小</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的内存信息"><span class="toc-text">数组的内存信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的每个元素的实部大小"><span class="toc-text">数组的每个元素的实部大小</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的每个元素的虚部大小"><span class="toc-text">数组的每个元素的虚部大小</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的创建"><span class="toc-text">数组的创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#numpy-empty"><span class="toc-text">numpy.empty</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#numpy-zeros创建指定大小的数组，以0填充"><span class="toc-text">numpy.zeros创建指定大小的数组，以0填充</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#numpy-zeros创建指定大小的数组，以0填充-1"><span class="toc-text">numpy.zeros创建指定大小的数组，以0填充</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#numpy-ones创建指定形状的数组，数组元素以-1-来填充："><span class="toc-text">numpy.ones创建指定形状的数组，数组元素以 1 来填充：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#numpy从已有数组创建数组numpy-asarray"><span class="toc-text">numpy从已有数组创建数组numpy.asarray</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> 生若直木,不语斧凿 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        python数值计算模块——NumPy
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-01-22 04:43:06</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#Python" title="Python">Python</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#NumPy" title="NumPy">NumPy</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <blockquote>
+<p>NumPy(Numerical Python) 是 Python 语言的一个扩展程序库，支持大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。NumPy 的前身 Numeric 最早是由 Jim Hugunin 与其它协作者共同开发，2005 年，Travis Oliphant 在 Numeric 中结合了另一个同性质的程序库 Numarray 的特色，并加入了其它扩展而开发了 NumPy。NumPy 为开放源代码并且由许多协作者共同维护开发。</p>
+</blockquote>
+<p>NumPy 是一个运行速度非常快的数学库，主要用于数组计算，包含：</p>
+<pre>
+    一个强大的N维数组对象 ndarray
+    广播功能函数
+    整合 C/C++/Fortran 代码的工具
+    线性代数、傅里叶变换、随机数生成等功能
+</pre>
+
+
+<h3 id="数组属性"><a href="#数组属性" class="headerlink" title="数组属性"></a>数组属性</h3><p>本章节我们将来了解 NumPy 数组的一些基本属性。</p>
+<p>NumPy 数组的维数称为秩（rank），一维数组的秩为 1，二维数组的秩为 2，以此类推。</p>
+<p>在 NumPy中，每一个线性的数组称为是一个轴（axis），也就是维度（dimensions）。比如说，二维数组相当于是两个一维数组，其中第一个一维数组中每个元素又是一个一维数组。所以一维数组就是 NumPy 中的轴（axis），第一个轴相当于是底层数组，第二个轴是底层数组里的数组。而轴的数量——秩，就是数组的维数。</p>
+<p>很多时候可以声明 axis。axis=0，表示沿着第 0 轴进行操作，即对每一列进行操作；axis=1，表示沿着第1轴进行操作，即对每一行进行操作。</p>
+<p>NumPy 的数组中比较重要 ndarray 对象属性有：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ndarray.ndim	秩，即轴的数量或维度的数量</span><br><span class="line">ndarray.shape	数组的维度，对于矩阵，n 行 m 列</span><br><span class="line">ndarray.size	数组元素的总个数，相当于 .shape 中 n*m 的值</span><br><span class="line">ndarray.dtype	ndarray 对象的元素类型</span><br><span class="line">ndarray.itemsize	ndarray 对象中每个元素的大小，以字节为单位</span><br><span class="line">ndarray.flags	ndarray 对象的内存信息</span><br><span class="line">ndarray.real	ndarray元素的实部</span><br><span class="line">ndarray.imag	ndarray 元素的虚部</span><br><span class="line">ndarray.data	包含实际数组元素的缓冲区，由于一般通过数组的索引获取元素，所以通常不需要使用这个属性。</span><br></pre></td></tr></table></figure>
+<h4 id="数组的维数"><a href="#数组的维数" class="headerlink" title="数组的维数"></a>数组的维数</h4><p>array.ndim #2</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy as np</span><br><span class="line">array = np.array([</span><br><span class="line">    [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</span><br><span class="line">    [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+<h4 id="数组的形状"><a href="#数组的形状" class="headerlink" title="数组的形状"></a>数组的形状</h4><p>相当于几行几列</p>
+<p>array.shape #2，3</p>
+<h4 id="数组的元素个数"><a href="#数组的元素个数" class="headerlink" title="数组的元素个数"></a>数组的元素个数</h4><p>array.size # 6</p>
+<h4 id="数组的元素数据类型"><a href="#数组的元素数据类型" class="headerlink" title="数组的元素数据类型"></a>数组的元素数据类型</h4><p>关于numpy中的数据类型，罗列如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">bool_	布尔型数据类型（True 或者 False）</span><br><span class="line">int_	默认的整数类型（类似于 C 语言中的 <span class="keyword">long</span>，int32 或 int64）</span><br><span class="line">intc	与 C 的 <span class="keyword">int</span> 类型一样，一般是 int32 或 <span class="keyword">int</span> <span class="number">64</span></span><br><span class="line">intp	用于索引的整数类型（类似于 C 的 ssize_t，一般情况下仍然是 int32 或 int64）</span><br><span class="line">int8	字节（-<span class="number">128</span> to <span class="number">127</span>）</span><br><span class="line">int16	整数（-<span class="number">32768</span> to <span class="number">32767</span>）</span><br><span class="line">int32	整数（-<span class="number">2147483648</span> to <span class="number">2147483647</span>）</span><br><span class="line">int64	整数（-<span class="number">9223372036854775808</span> to <span class="number">9223372036854775807</span>）</span><br><span class="line">uint8	无符号整数（<span class="number">0</span> to <span class="number">255</span>）</span><br><span class="line">uint16	无符号整数（<span class="number">0</span> to <span class="number">65535</span>）</span><br><span class="line">uint32	无符号整数（<span class="number">0</span> to <span class="number">4294967295</span>）</span><br><span class="line">uint64	无符号整数（<span class="number">0</span> to <span class="number">18446744073709551615</span>）</span><br><span class="line">float_	float64 类型的简写</span><br><span class="line">float16	半精度浮点数，包括：<span class="number">1</span> 个符号位，<span class="number">5</span> 个指数位，<span class="number">10</span> 个尾数位</span><br><span class="line">float32	单精度浮点数，包括：<span class="number">1</span> 个符号位，<span class="number">8</span> 个指数位，<span class="number">23</span> 个尾数位</span><br><span class="line">float64	双精度浮点数，包括：<span class="number">1</span> 个符号位，<span class="number">11</span> 个指数位，<span class="number">52</span> 个尾数位</span><br><span class="line">complex_	complex128 类型的简写，即 <span class="number">128</span> 位复数</span><br><span class="line">complex64	复数，表示双 <span class="number">32</span> 位浮点数（实数部分和虚数部分）</span><br><span class="line">complex128	复数，表示双 <span class="number">64</span> 位浮点数（实数部分和虚数部分）</span><br></pre></td></tr></table></figure>
+<p>array.dtype # int32</p>
+<h4 id="数据每个元素的大小"><a href="#数据每个元素的大小" class="headerlink" title="数据每个元素的大小"></a>数据每个元素的大小</h4><p>array.itemsize #4 这里是因为int32占四个字节</p>
+<h4 id="数组的内存信息"><a href="#数组的内存信息" class="headerlink" title="数组的内存信息"></a>数组的内存信息</h4><p>array.flags </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">C_CONTIGUOUS : True</span><br><span class="line">F_CONTIGUOUS : False</span><br><span class="line">OWNDATA : True</span><br><span class="line">WRITEABLE : True</span><br><span class="line">ALIGNED : True</span><br><span class="line">WRITEBACKIFCOPY : False</span><br><span class="line">UPDATEIFCOPY : False</span><br></pre></td></tr></table></figure>
+<h4 id="数组的每个元素的实部大小"><a href="#数组的每个元素的实部大小" class="headerlink" title="数组的每个元素的实部大小"></a>数组的每个元素的实部大小</h4><p>array.real </p>
+<p>这里我们的每个数据都是实数<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">[[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>]</span><br><span class="line"> [<span class="number">2</span> <span class="number">3</span> <span class="number">4</span>]]</span><br></pre></td></tr></table></figure></p>
+<h4 id="数组的每个元素的虚部大小"><a href="#数组的每个元素的虚部大小" class="headerlink" title="数组的每个元素的虚部大小"></a>数组的每个元素的虚部大小</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">array.imag </span><br><span class="line"></span><br><span class="line">[[<span class="number">0</span> <span class="number">0</span> <span class="number">0</span>]</span><br><span class="line"> [<span class="number">0</span> <span class="number">0</span> <span class="number">0</span>]]</span><br></pre></td></tr></table></figure>
+<h3 id="数组的创建"><a href="#数组的创建" class="headerlink" title="数组的创建"></a>数组的创建</h3><h4 id="numpy-empty"><a href="#numpy-empty" class="headerlink" title="numpy.empty"></a>numpy.empty</h4><p>创建空数组:empty(shape, dtype=float, order=’C’)</p>
+<p>shape:空数组的行列</p>
+<p>dtype:每个元素的数据类型</p>
+<p>order:优先顺序，可以不予关注</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = np.empty([<span class="number">3</span>,<span class="number">2</span>],dtype=<span class="keyword">int</span>,order=<span class="string">'F'</span>)</span><br><span class="line"></span><br><span class="line">[[         <span class="number">0</span> <span class="number">1072693248</span>]</span><br><span class="line"> [<span class="number">1072693248</span>          <span class="number">0</span>]</span><br><span class="line"> [         <span class="number">0</span> <span class="number">1072693248</span>]]</span><br></pre></td></tr></table></figure>
+<h4 id="numpy-zeros创建指定大小的数组，以0填充"><a href="#numpy-zeros创建指定大小的数组，以0填充" class="headerlink" title="numpy.zeros创建指定大小的数组，以0填充"></a>numpy.zeros创建指定大小的数组，以0填充</h4><p>x= np.zeros([2,2],dtype=np.int) 两行两列的0数组</p>
+<h4 id="numpy-zeros创建指定大小的数组，以0填充-1"><a href="#numpy-zeros创建指定大小的数组，以0填充-1" class="headerlink" title="numpy.zeros创建指定大小的数组，以0填充"></a>numpy.zeros创建指定大小的数组，以0填充</h4><p>x= np.zeros([2,2],dtype=np.int) 两行两列的0数组</p>
+<h4 id="numpy-ones创建指定形状的数组，数组元素以-1-来填充："><a href="#numpy-ones创建指定形状的数组，数组元素以-1-来填充：" class="headerlink" title="numpy.ones创建指定形状的数组，数组元素以 1 来填充："></a>numpy.ones创建指定形状的数组，数组元素以 1 来填充：</h4><p>numpy.ones(shape, dtype = None, order = ‘C’)</p>
+<h4 id="numpy从已有数组创建数组numpy-asarray"><a href="#numpy从已有数组创建数组numpy-asarray" class="headerlink" title="numpy从已有数组创建数组numpy.asarray"></a>numpy从已有数组创建数组numpy.asarray</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">numpy.asarray</span><br><span class="line">numpy.asarray 类似 numpy.array，但 numpy.asarray 只有三个，比 numpy.array 少两个。</span><br><span class="line"></span><br><span class="line">numpy.asarray(a, dtype = None, order = None)</span><br><span class="line">参数说明：</span><br><span class="line"></span><br><span class="line">参数	描述</span><br><span class="line">a	任意形式的输入参数，可以是，列表, 列表的元组, 元组, 元组的元组, 元组的列表，多维数组</span><br><span class="line">dtype	数据类型，可选</span><br><span class="line">order	可选，有<span class="string">"C"</span>和<span class="string">"F"</span>两个选项,分别代表，行优先和列优先，在计算机内存中的存储元素的顺序。</span><br></pre></td></tr></table></figure>
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
